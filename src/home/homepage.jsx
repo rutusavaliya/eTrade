@@ -19,7 +19,7 @@ function HomePage() {
 
                 <div className=" flex">
                     <English />
-                    <div></div>
+                    <div>Rutu</div>
                     <USD />
                 </div>
                 <div className="flex text-gray-400 font-semibold">
