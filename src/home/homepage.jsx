@@ -16,13 +16,11 @@ function HomePage() {
     return (
         <>
             <div className='flex'>
-
-                <div className=" flex">
+                 <div className=" flex">
                     <English />
-                    <div>Rutu</div>
                     <USD />
-                </div>
-                <div className="flex text-gray-400 font-semibold">
+                </div> 
+                {/* <div className="flex text-gray-400 font-semibold">
                     <div>
                         <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
                     </div>
@@ -32,13 +30,12 @@ function HomePage() {
                     <div>
                         <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
                     </div>
-                </div>
+                </div> */}
             </div>
-            <div>
+            <div className='sticky top-2 z-50'>
                 <Dropdown />
             </div>
-
-            <section className='HERO-SECTION  -top-36 h-[850px] relative container mx-auto overflow-hidden '>
+            <section className='HERO-SECTION  -top-36 h-[850px]  relative container mx-auto overflow-hidden '>
                 <div className='BACKGROUND-IMG'>
                     <img className='absolute right-96 -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
                     <img className='absolute right-10 -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
@@ -92,7 +89,7 @@ function HomePage() {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 import singimg from '../assets/page/signimg.jpg'
 import logo from '../assets/page/logos.png'
 
-function Signin() {
+function Forgot() {
     return(
         <>
             <div className="flex h-screen">
@@ -91,4 +91,4 @@ function Signin() {
     )
 }
 
-export default Signin
+export default Forgot

@@ -1,4 +1,4 @@
-import Components from "../components/components";
+import Components from "../Components/components";
 import Footer from '../Components/Footer'
 import { English, USD } from "../components/navbar"
 import { Dropdown1, NavBottom } from "../components/navbar1"
