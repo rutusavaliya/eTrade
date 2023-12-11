@@ -18,6 +18,7 @@ import news2 from '../assets/blog/news2.png'
 import news3 from '../assets/blog/news3.png'
 import Components from '../Components/components'
 import { English, USD } from "../components/navbar"
+import { Link } from 'react-router-dom'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import '../Blog/gallarypost.css'
 
@@ -226,7 +227,7 @@ function Gallerypost() {
                   </div>
                 </div>
                 <div className='mt-8'>
-                  <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
+                  <Link to="/Standrdpost" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
                         before:absolute
                         before:content-[""]
                         before:px-20
@@ -240,7 +241,7 @@ function Gallerypost() {
                         before:hover:scale-105
                         before:duration-300
                         before:rounded-md
-                       '>Send Message</a>
+                       '>Send Message</Link>
                 </div>
               </div>
             </div>
@@ -254,10 +255,10 @@ function Gallerypost() {
                 <h1 className='mt-3'>Latest Posts</h1>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img>
+                   <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>Mar 27, 2022</h1>
                       <h1 className='pl-2'>300k Views</h1>
@@ -266,10 +267,10 @@ function Gallerypost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img>
+                    <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>Mar 27, 2022</h1>
                       <h1 className='pl-2'>300k Views</h1>
@@ -278,10 +279,10 @@ function Gallerypost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-32  h-20 group-hover:scale-110 duration-500' src={blog1} alt=""></img>
+                   <Link to="/Standrdpost"><img className='w-32  h-20 group-hover:scale-110 duration-500' src={blog1} alt=""></img></Link> 
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>Mar 27, 2022</h1>
                       <h1 className='pl-2'>300k Views</h1>
@@ -295,10 +296,10 @@ function Gallerypost() {
                 <h1 className='mt-3'>Latest Posts</h1>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img>
+                    <Link to="/Standrdpost"></Link><img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img>
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg hover:text-blue-500 duration-500 font-semibold '>Men's Fashion Tshirt</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg hover:text-blue-500 duration-500 font-semibold '>Men's Fashion Tshirt</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>$30</h1>
                       <h1 className='pl-2'>$20</h1>
@@ -307,10 +308,10 @@ function Gallerypost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes1} alt=""></img>
+                    <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes1} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Nike Shoes</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Nike Shoes</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>$200</h1>
                       <h1 className='pl-2'>$150</h1>
@@ -319,10 +320,10 @@ function Gallerypost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                    <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img>
+                    <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
-                    <a href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Addidas Shoes</a>
+                    <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Addidas Shoes</Link>
                     <div className='flex text-sm text-[#777777]'>
                       <h1>$300</h1>
                       <h1 className='pl-2'>$200</h1>
@@ -394,7 +395,7 @@ function Gallerypost() {
           <div className='grid grid-cols-3 gap-10'>
             <div>
               <img className='w-full rounded-lg mb-10' src={news1} alt="" />
-              <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1>
+             <Link to="/Standrdpost"><h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1></Link> 
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={image1} alt="" />
                 <div>
@@ -405,7 +406,7 @@ function Gallerypost() {
             </div>
             <div>
               <img className='w-full rounded-lg mb-10' src={news2} alt="" />
-              <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1>
+             <Link to="/Standrdpost"> <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1></Link>
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={bimg} alt="" />
                 <div>
@@ -416,7 +417,7 @@ function Gallerypost() {
             </div>
             <div>
               <img className='w-full rounded-lg mb-10' src={news3} alt="" />
-              <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1>
+              <Link to="/Standrdpost"><h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1></Link> 
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={bimg5} alt="" />
                 <div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import signimg from '../assets/page/signimg.jpg'
 import logo from '../assets/page/logos.png'
+import { Link } from "react-router-dom";
 
 
 function SignUP() {
@@ -25,7 +26,7 @@ function SignUP() {
                     <div className="flex justify-end mr-24 mt-5">
                         <p className="mr-7 mt-5 text-sm">Already a member?</p>
                         <div className='mt-5'>
-                    <a href="#" className='relative z-10 font-bold bg-[#ff497c] text-white py-3 px-6 rounded-md 
+                    <Link to="/Signin" href="#" className='relative z-10 font-bold bg-[#ff497c] text-white py-3 px-6 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-12
@@ -39,7 +40,7 @@ function SignUP() {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Sign in</a>
+                                               '>Sign in</Link>
                   </div>
                     </div>
 

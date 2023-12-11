@@ -1,6 +1,7 @@
 import * as React from "react";
 import singimg from '../assets/page/signimg.jpg'
 import logo from '../assets/page/logos.png'
+import { Link } from "react-router-dom";
 
 function Forgot() {
     return(
@@ -21,7 +22,7 @@ function Forgot() {
                     <div className="flex justify-end mr-24 mt-5">
                         <p className="mr-7 mt-5 text-xs"> Already a member?</p>
                         <div className='mt-4'>
-                    <a href="#" className='relative z-10 font-bold text-sm bg-[#ff497c] text-white py-3 px-5 rounded-md 
+                    <Link to="/Signin" href="#" className='relative z-10 font-bold text-sm bg-[#ff497c] text-white py-3 px-5 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-12
@@ -35,7 +36,7 @@ function Forgot() {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Sign in</a>
+                                               '>Sign in</Link>
                   </div>
                     </div>
                     <div className=" mt-20 ml-60 ">

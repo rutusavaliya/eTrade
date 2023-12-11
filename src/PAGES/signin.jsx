@@ -1,6 +1,7 @@
 import * as React from "react";
-import singimg from '../assets/page/signimg.jpg'
+import singimg from '../assets/page/singimg.jpg'
 import logo from '../assets/page/logos.png'
+import { Link } from "react-router-dom";
 
 function Signin() {
     return(
@@ -11,11 +12,11 @@ function Signin() {
                         <a href="">
                             <img className="h-10" src={logo} alt="" />
                         </a>
-                        <h1 className="font-medium mt-16 text-2xl">
-                            We Offer the Best Product
+                        <h1 className="font-medium mt-16 text-3xl">
+                            We Offer the Best <br/>Product
                         </h1>
                     </span>
-                    <img className="w-[400px] h-[700px] overflow-hidden fixed -z-10 object-cover" src={singimg} alt=""></img>
+                    <img className="w-[450px] h-[900px] overflow-hidden fixed -z-10 object-cover" src={singimg} alt=""></img>
                 </div>
                 <div className="Form-section w-full">
                     <div className="flex justify-end mr-24 mt-5">
@@ -86,7 +87,7 @@ function Signin() {
                                                 before:rounded-md
                                                '>Sign in</a>
                   </div>
-                                <a className="pl-20 mt-2 text-blue-600 text-xs" href="#">Forget Password?</a>
+                               <Link to="/Forgot"> <a className="pl-20 mt-2 text-blue-600 text-xs" href="#">Forget Password?</a></Link>
                                </div>
                             </from>
                         </div>

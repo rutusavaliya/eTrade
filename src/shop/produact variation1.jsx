@@ -11,6 +11,7 @@ import product14 from '../assets/shop/product14.png'
 import product15 from '../assets/shop/product15.png'
 import product16 from '../assets/shop/product16.png'
 import { English, USD } from "../components/navbar"
+import { Link } from 'react-router-dom'
 import Footer from '../Components/Footer'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from "../components/components";
@@ -112,7 +113,7 @@ const ProductV1 = () => {
                 </div>
                 <div className='flex items-center'>
                   <div className='mx-5'>
-                    <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
+                   <Link to="/Cart"><a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-32
@@ -126,7 +127,7 @@ const ProductV1 = () => {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Add to Cart</a>
+                                               '>Add to Cart</a></Link>
                   </div>
 
                   <div className='flex mx-5'>

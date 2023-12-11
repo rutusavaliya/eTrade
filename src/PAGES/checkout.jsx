@@ -33,225 +33,287 @@ function Checkout() {
       <div>
         <NavBottom />
       </div>
+      <section className='BILLING-FORM container mx-auto my-[80px]'>
+                    <div className='grid grid-cols-2 gap-10'>
+                        <div className='LEFT-PART'>
+                            <div className='dropdown-1'>
+                                <div className='flex  items-center py-4 px-7 bg-[#F6F7FB] rounded-md mb-5'>
+                                    <span className='text-[#777777] text-lg'><i class="ri-user-3-fill "></i></span>
+                                    <h1 className='text-gray-500 ml-2'>Returning customer?</h1>
+                                    <a className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1 ' href="">Click here to login <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></a>
+                                </div>
+
+                                <div className='border rounded-xl p-7 mb-5 hidden'>
+                                    <h1 className='text-gray-500 mb-8'>If you didn't Logged in, Please Log in first.</h1>
+                                    <div className='relative text-gray-500 mb-8'>
+                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Email</label>
+                                        <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
+                                    </div>
+                                    <div className='relative text-gray-500 mb-8'>
+                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Password</label>
+                                        <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
+                                    </div>
+                                    <div className='BUTTON'>
+                                        <a href="#" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
+                                            before:absolute
+                                            before:content-[""]
+                                            before:bg-[#3577F0]
+                                            before:top-0
+                                            before:bottom-0
+                                            before:left-0
+                                            before:right-0
+                                            before:hover:scale-110
+                                            before:duration-300
+                                            before:rounded-md
+                                            before:-z-10
+                                            '>Sign In</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='dropdown-2'>
+                                <div className='flex  items-center py-4 px-7 bg-[#F6F7FB] rounded-md mb-8'>
+                                    <span className='text-[#777777] text-lg'><i class="ri-pencil-fill "></i></span>
+                                    <h1 className='text-gray-500 ml-2'>Have a coupon?</h1>
+                                    <a className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1' href="">Click here to enter your code <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></a>
+                                </div>
+
+                                <div className='border rounded-xl p-7 mb-5 hidden'>
+                                    <h1 className='text-gray-500 mb-8'>If you have a coupon code, please apply it below.</h1>
+                                    <div className='flex items-center text-gray-500 mb-4'>
+                                        <input type="text" className=' border border-gray-300  px-7 py-4 rounded-md font-normal outline-none mr-4' placeholder='Enter coupon code' />
+                                        <div className='BUTTON'>
+                                            <a href="#" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
+                                            before:absolute code
+                                            before:content-[""]
+                                            before:bg-[#3577F0]
+                                            before:top-0
+                                            before:bottom-0
+                                            before:left-0
+                                            before:right-0
+                                            before:hover:scale-110
+                                            before:duration-300
+                                            before:rounded-md
+                                            before:-z-10
+                                            '>Sign In</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='BILLING-DETAILS'>
+                                <h1 className='font-medium text-2xl text-[#292930] mb-10'>Billing details</h1>
+
+                                <div className='grid grid-cols-2 gap-8 mb-8'>
+                                    <div className='relative text-gray-500  '>
+                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >First Name<span className='text-[#E76458] ml-1'>*</span></label>
+                                        <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='Adam' />
+                                    </div>
+                                    <div className='relative text-gray-500 '>
+                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Last Name<span className='text-[#E76458] ml-1'>*</span></label>
+                                        <input type="text" className='w-full border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='John' />
+                                    </div>
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Company Name</label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
+                                    <div className='border border-gray-300  rounded-md font-normal '>
+                                        <select name="" id="" className='w-full  px-10 py-5 outline-none border-r-[40px] border-white rounded-md' >
+                                            <option value="">Australia</option>
+                                            <option value="">England</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">Switzerland</option>
+                                            <option value="">United Kindom (UK)</option>
+                                            <option value="">United States (USA)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Street Address <span className='text-[#E76458] ml-1'>*</span></label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='House number and street name' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' ></label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='Apartment, suite, unit, etc. (optonal)' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Town/ City <span className='text-[#E76458] ml-1'>*</span></label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country</label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Phone <span className='text-[#E76458] ml-1'>*</span></label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                </div>
+
+                                <div className='relative text-gray-500  mb-8'>
+                                    <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Email Address <span className='text-[#E76458] ml-1'>*</span></label>
+                                    <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                </div>
+
+                                <div className='flex items-center  mb-8'>
+                                    <input className='w-4 h-4 cursor-pointer' type="checkbox" />
+                                    <span className='ml-3 text-base cursor-pointer'>Create an account</span>
+                                </div>
+
+                                <div>
+                                    <div className='flex justify-between items-center mb-8'>
+                                        <h1 className='font-medium text-2xl text-[#292930] cursor-pointer'>Ship to a different address?</h1>
+                                        <input className='w-4 h-4 cursor-pointer' type="checkbox" />
+                                    </div>
+
+                                    <div className='hidden'>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
+                                            <div className='border border-gray-300  rounded-md font-normal '>
+                                                <select name="" id="" className='w-full  px-10 py-5 outline-none border-r-[40px] border-white rounded-md' >
+                                                    <option value="">Australia</option>
+                                                    <option value="">England</option>
+                                                    <option value="">New Zealand</option>
+                                                    <option value="">Switzerland</option>
+                                                    <option value="">United Kindom (UK)</option>
+                                                    <option value="">United States (USA)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Street Address <span className='text-[#E76458] ml-1'>*</span></label>
+                                            <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='House number and street name' />
+                                        </div>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' ></label>
+                                            <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' placeholder='Apartment, suite, unit, etc. (optonal)' />
+                                        </div>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Town/ City <span className='text-[#E76458] ml-1'>*</span></label>
+                                            <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                        </div>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country</label>
+                                            <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                        </div>
+                                        <div className='relative text-gray-500  mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Phone <span className='text-[#E76458] ml-1'>*</span></label>
+                                            <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
+                                        </div>
+                                    </div>
+
+                                    <div className='relative text-gray-500 '>
+                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Other Notes (optional)</label>
+                                        <textarea className='resize-none border w-full border-gray-300 rounded-md font-normal outline-none
+                                    px-9 py-5' cols="" rows="5" placeholder='Notes about your order, e.g. speacial notes for delivery.'></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className='RIGHT-PART'>
+                            <div className='bg-[#F9F3F0] text-[#292930] rounded-md p-10'>
+                                <div>
+                                    <h1 className='font-semibold text-xl mb-6'>Your Order</h1>
+                                    <div className='bg-white rounded-md p-7'>
+                                        <div className='flex justify-between font-semibold text-xl border-b py-5'>
+                                            <h1>Product</h1>
+                                            <h1>Subtotal</h1>
+                                        </div>
+                                        <div className='flex justify-between font-medium text-base border-b py-5'>
+                                            <h1>Commodo Blown Lamp x1</h1>
+                                            <h1>$117.00</h1>
+                                        </div>
+                                        <div className='flex justify-between font-medium text-base border-b py-5'>
+                                            <h1>Commodo Blown Lamp x1</h1>
+                                            <h1>$198.00</h1>
+                                        </div>
+                                        <div className='flex justify-between font-medium text-base border-b py-5'>
+                                            <h1>Subtotal</h1>
+                                            <h1>$117.00</h1>
+                                        </div>
+                                        <div className='border-b py-5'>
+                                            <div className='flex justify-between font-medium text-base mb-3'>
+                                                <h1>Shipping Method</h1>
+                                                <h1>$35.00</h1>
+                                            </div>
+                                            <div className='text-gray-500'>
+                                                <ul className='leading-7'>
+                                                    <li><input className='cursor-pointer' type="radio" checked />
+                                                        <label className='ml-2 cursor-pointer'>Free Shippping</label>
+                                                    </li>
+                                                    <li><input className='cursor-pointer' type="radio" />
+                                                        <label className='ml-2 cursor-pointer'>Local</label>
+                                                    </li>
+                                                    <li><input className='cursor-pointer' type="radio" />
+                                                        <label className='ml-2 cursor-pointer'>Flat rate</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className='flex justify-between font-semibold text-2xl  py-5'>
+                                            <h1>Total</h1>
+                                            <h1>$323.00</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='mt-8'>
+                                    <div className='border-b-2 py-4'>
+                                        <input className='h-4 w-4' type="radio" checked />
+                                        <label className='ml-3 text-xl font-semibold'>Direct bank transfer</label>
+                                        <p className='text-gray-500 ml-7 leading-8 tracking-wide mt-5'>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                                    </div>
+                                    <div className='border-b-2 py-4'>
+                                        <input className='h-4 w-4' type="radio" />
+                                        <label className='ml-3 text-xl font-semibold'>Cash on delivery</label>
+                                        <p className='text-gray-500 ml-7 leading-8 tracking-wide mt-5'>Pay with cash upon delivery.</p>
+                                    </div>
+                                    <div className='border-b-2 py-4 '>
+                                        <div className='flex justify-between items-center'>
+                                            <div>
+                                                <input className='h-4 w-4' type="radio" />
+                                                <label className='ml-3 text-xl font-semibold'>Paypal</label>
+                                            </div>
+                                            <img src="../src/assets/pages/checkout/asset 2.png" alt="" />
+                                        </div>
+                                        <p className='text-gray-500 ml-7 leading-8 tracking-wide mt-5'>Pay via PayPal; you can pay with your credit card if you don’t have a <br />PayPal account.</p>
+                                    </div>
+                                    <div className='relative text-center w-full py-5 rounded-md text-white font-bold z-10 mt-8'>
+                                        <a href="" className='
+                                        before:absolute
+                                        before:content-[""]
+                                        before:bg-[#3577F0]
+                                        before:top-0
+                                        before:bottom-0
+                                        before:left-0
+                                        before:right-0
+                                        before:hover:scale-105
+                                        before:duration-300
+                                        before:rounded-md
+                                        before:-z-10
+                                        '>Process to Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
       <div className=' container mx-auto'>
-        <div className='flex justify-center mt-10 '>
-          <div className='left-section  '>
-            <h1 className='text-md'>
-              Billing detalis
-            </h1>
-            <div className='flex '>
-              <div className="relative mt-8">
-                <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600  text-sm">
-                  first name <span className='text-red-500'>*</span>
-                </label>
-                <input
-                  class="w-80 h-12 border  focus:outline-none mt-2 rounded-lg  px-6 text-gray-500 text-sm "
-                  type="text"
-                  placeholder="Adam"
-                ></input>
-              </div>
-
-              <div className="relative mt-8 ml-3">
-                <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                  last name<span className='text-red-500'>*</span>
-                </label>
-                <input
-                  className="w-80 h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                  type="text"
-                  placeholder="john"
-                ></input>
-              </div>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                company Name <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none   mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text"
-
-              ></input>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff]  text-gray-600 text-sm">
-                country/Region <span className='text-red-500'>*</span>
-              </label>
-              <select
-                className="w-[100%] pr-[20px] select:pr-[40px] h-12 border focus:outline-none  mt-2 rounded-lg px-6  text-gray-500 text-sm "
-                type="text">
-                <option value="">Australia</option>
-                <option value="">England</option>
-                <option value="">New Zealand</option>
-                <option value="">Switzerland</option>
-                <option value="">United kindom (UK)</option>
-                <option value="">United States (USA)</option>
-
-              </select>
-
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                Street Address <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text" placeholder='House number and street name'>
-              </input>
-              <div>
-                <input
-                  className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                  type="text" placeholder='Apartment, suite,unit,etc.(optional)'>
-                </input>
-              </div>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                Town/City <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text">
-
-              </input>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                Country <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text">
-
-              </input>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                phone <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text">
-
-              </input>
-            </div>
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                Email Address <span className='text-red-500'>*</span>
-              </label>
-              <input
-                className="w-[100%] h-12 border focus:outline-none  mt-2 rounded-lg px-6 text-gray-500 text-sm"
-                type="text">
-
-              </input>
-            </div>
-
-            <div className='mt-5 '>
-              <input type="checkbox" id="box1" name="box1" value="Box"></input>
-              <label for="vehicle1" className='pl-3 text-sm'>Create an Account</label><br></br>
-            </div>
-
-            <div className='mt-5'>
-              <div className='flex'>
-                <h1 className='font-semibold text-lg'>Ship to a different address ?</h1>
-                <input className='ml-48' type="checkbox" id="box1" name="box1" value="Box"></input>
-              </div>
-            </div>
-
-            <div className="relative mt-5">
-              <label className="absolute top-[-5px] left-[20px] bg-[#fff] px-2 text-gray-600 text-sm">
-                Other Notes (optional)
-              </label>
-              <input
-                className="w-[100%] h-44 border rounded-lg px-6 text-gray-500 text-sm pb-20"
-                type="text" placeholder='Notes about your order, e.g. speacial notes for delivery.'>
-
-              </input>
-            </div>
-          </div>
-
-          <div className='right-section h-[910px] bg-[#f9f3f0] border rounded-md ml-14'>
-            <div className='  w-[570px]  '>
-              <h1 className='mt-5 ml-12'>Your order</h1>
-              <div className='bg-white rounded-md  w-[510px] h-96 ml-7 mt-5'>
-                <div className='flex border-b-2 w-[470px] ml-4 mt-5 pt-5 pb-3  '>
-                  <p className='ml-4 text-xs font-semibold'>product</p>
-                  <p className='ml-80 text-xs font-semibold'>SubTotal</p>
-                </div>
-
-                <div className='flex border-b-2 w-[470px] ml-4 pb-3 mt-3'>
-                  <p className='ml-4 text-xs font-semibold'>Commodo Blown Lamp x1</p>
-                  <p className='ml-56 text-xs font-semibold'>$117.00</p>
-                </div>
-                <div className='flex  border-b-2 w-[470px] ml-4 pb-3 mt-3 '>
-                  <p className='ml-4 text-xs font-semibold' >Commodo Blown Lamp x1</p>
-                  <p className='ml-56 text-xs font-semibold'>$198.00</p>
-                </div>
-                <div className='flex  border-b-2 w-[470px] ml-4 pb-3 mt-3'>
-                  <p className='ml-4 text-xs font-semibold' >SubTotal</p>
-                  <p className='ml-80 text-xs font-semibold'>$117.00</p>
-                </div>
-                <div className=' border-b-2 w-[470px] ml-4 pb-3 mt-3 '>
-                  <div className='flex'>
-                    <p className='ml-4 text-xs font-semibold'>Shipping method</p>
-                    <p className='ml-[275px] text-xs font-semibold'>$35.00</p>
-                  </div>
-
-                  <div className='ml-4 leading-7 text-xs text-left '>
-                    <input type="radio" id="box1" name="box1" value="Box"></input>
-                    <label for="vehicle1"> Free Shippping</label><br></br>
-                    <input type="radio" id="box2" name="box2" value="box"></input>
-                    <label for="vehicle2">Local</label><br></br>
-                    <input type="radio" id="box3" name="box3" value="Box"></input>
-                    <label for="vehicle3">Flat rate</label><br></br>
-                  </div>
-                </div>
-                <div className='flex mt-5'>
-                  <p className='ml-8 text-lg font-semibold' >Total</p>
-                  <p className='ml-80 font-bold'>$323.00</p>
-                </div>
-              </div>
-
-              <div className='ml-7 mt-5 w-[500px] border-b-2 pb-4'>
-                <input type="radio" id="box1" name="box1" value="Box"></input>
-                <label for="vehicle1" className='ml-3'>Direct bank transfer</label>
-                <p className='text-md text-gray-500 mt-4 ml-6'>Make your payment directly into our bank account. Please use your<br></br> Order ID as the payment reference. Your order will not be shipped<br></br> until the funds have cleared in our account.</p>
-              </div>
-              <div className='ml-7 mt-5 w-[500px] border-b-2 pb-4'>
-                <input type="radio" id="box1" name="box1" value="Box"></input>
-                <label for="vehicle1" className='ml-3'>Cash on delivery</label>
-                <p className='text-sm text-gray-500 mt-4 ml-7'>pay with cash upon delivery</p>
-              </div>
-              <div className='ml-7 mt-5 w-[500px] border-b-2'>
-                <input type="radio" id="box1" name="box1" value="Box"></input>
-                <label for="vehicle1" className='ml-3'>Direct bank transfer</label>
-                <p className='text-lg text-gray-500 mt-4 ml-6 pb-4'>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-              </div>
-              <div className='mt-6'>
-                <a href="#" className='relative z-10 text-center pl-48 font-bold text-sm bg-[#3577F0] text-white py-3 px-10 ml-7 rounded-md 
-                                                before:absolute
-                                                before:content-[""]
-                                                before:px-64
-                                                before:py-6
-                                                before:bg-[#3577F0]
-                                                before:left-0
-                                                before:top-0
-                                                before:right-0 
-                                                before:bottom-0
-                                                before:-z-10
-                                                before:hover:scale-105
-                                                before:duration-300
-                                                before:rounded-md
-                                               '>Process to Checkout</a>
-              </div>
-            </div>
-          </div>
-        </div>
-</div>
-        <div className=' container mx-auto'>
-          <Footer />
-        </div>
-      </>
-      )
+        <Footer />
+      </div>
+    </>
+  )
 }
 
-      export default Checkout
+export default Checkout

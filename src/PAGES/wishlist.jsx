@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../Components/Footer'
 import { English, USD } from "../components/navbar"
 import { Dropdown1, NavBottom } from "../components/navbar1"
@@ -61,9 +62,9 @@ function Wishlist() {
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
                                     </p>
-                                    <button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
+                                   <Link to="/Cart"><button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
                                         Add to Cart
-                                    </button>
+                                    </button></Link> 
                                 </div>
                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
                                     <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
@@ -75,9 +76,9 @@ function Wishlist() {
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
                                     </p>
-                                    <button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
+                                   <Link to="/Cart"><button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
                                         Add to Cart
-                                    </button>
+                                    </button></Link>
                                 </div>
                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
                                     <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
@@ -89,9 +90,9 @@ function Wishlist() {
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
                                     </p>
-                                    <button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
+                                   <Link to="/Cart"> <button className="border rounded-lg text-base font-semibold px-4 py-2 mr-4 hover:text-white hover:bg-[#3577F0] duration-300">
                                         Add to Cart
-                                    </button>
+                                    </button></Link>
                                 </div>
                             </div>
                         </div>

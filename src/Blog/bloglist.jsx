@@ -12,6 +12,7 @@ import bimg from '../assets/Blog/bimg.png'
 import image1 from '../assets/Blog/image1.png'
 import bimg1 from '../assets/Blog/bimg1.png'
 import { English, USD } from "../components/navbar"
+import { Link } from 'react-router-dom'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 
 function Bloglist() {
@@ -73,7 +74,7 @@ function Bloglist() {
             </div>
             <p className='text-[16px] leading-7 font-sanssarif text-[#777777] mt-5'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi.<br></br> Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis.<br></br> Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
             <div className='mt-8'>
-                    <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
+                    <Link to="/Standrdpost" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-16
@@ -87,7 +88,7 @@ function Bloglist() {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Read More</a>
+                                               '>Read More</Link>
                   </div>
           </div>
 
@@ -114,7 +115,7 @@ function Bloglist() {
             </div>
             <p className='text-base leading-7 font-sanssarif text-[#777777] mt-5'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus<br></br> velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id<br></br> dignissim et, imperdiet vitae mauris.</p>
             <div className='mt-8'>
-                    <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
+            <Link to="/Standrdpost" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-16
@@ -128,7 +129,7 @@ function Bloglist() {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Read More</a>
+                                               '>Read More</Link>
                   </div>
           </div>
 
@@ -169,7 +170,7 @@ function Bloglist() {
             </div>
             <p className='text-base leading-7 font-sanssarif text-[#777777] mt-5'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus<br></br> velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id<br></br> dignissim et, imperdiet vitae mauris.</p>
             <div className='mt-8'>
-                    <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
+            <Link to="/Standrdpost" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white py-3 px-6 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-16
@@ -183,7 +184,7 @@ function Bloglist() {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Read More</a>
+                                               '>Read More</Link>
                   </div>
           </div>
         </div>
@@ -196,10 +197,10 @@ function Bloglist() {
               <h1 className='mt-3'>Latest Posts</h1>
               <div className='flex mt-3 group'>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img>
+                  <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-[17px]  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                  <Link to="/Standrdpost" href='#' className='text-[17px]  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>Mar 27, 2022</h1>
                     <h1 className='pl-2'>300k Views</h1>
@@ -209,10 +210,10 @@ function Bloglist() {
               </div>
               <div className='flex mt-3 group '>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img>
+                  <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-[17px] hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                  <Link to="/Standrdpost" href='#' className='text-[17px] hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>Mar 27, 2022</h1>
                     <h1 className='pl-2'>300k Views</h1>
@@ -222,10 +223,10 @@ function Bloglist() {
               </div>
               <div className='flex mt-3 group '>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog1} alt=""></img>
+                  <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog1} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-[17px]  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</a>
+                  <Link to="/Standrdpost" href='#' className='text-[17px]  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>Mar 27, 2022</h1>
                     <h1 className='pl-2'>300k Views</h1>
@@ -241,10 +242,10 @@ function Bloglist() {
               <h1 className='mt-3'>Latest Posts</h1>
               <div className='flex mt-3 group'>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img>
+                 <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Men's Fashion Tshirt</a>
+                  <Link to="/Standrdpost" href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Men's Fashion Tshirt</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>$30</h1>
                     <h1 className='pl-2'>$20</h1>
@@ -254,10 +255,10 @@ function Bloglist() {
               </div>
               <div className='flex mt-3 group'>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes1} alt=""></img>
+                  <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes1} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Nike Shoes</a>
+                  <Link to="/Standrdpost" href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Nike Shoes</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>$200</h1>
                     <h1 className='pl-2'>$150</h1>
@@ -267,10 +268,10 @@ function Bloglist() {
               </div>
               <div className='flex mt-3 group'>
                 <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                  <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img>
+                  <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img></Link>
                 </a>
                 <div className='ml-3'>
-                  <a href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Addidas Shoes</a>
+                  <Link to="/Standrdpost" href='#' className='text-sm  hover:text-blue-500 duration-500 font-semibold '>Addidas Shoes</Link>
                   <div className='flex text-sm text-[#777777]'>
                     <h1>$300</h1>
                     <h1 className='pl-2'>$200</h1>

@@ -8,6 +8,7 @@ import Footer from '../Components/Footer'
 import { English, USD } from "../components/navbar"
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from "../components/components";
+import { Link } from 'react-router-dom'
 
 
 const ProductV3 = () => {
@@ -111,7 +112,7 @@ const ProductV3 = () => {
                 </div>
                 <div className='flex items-center'>
                   <div className='mx-5'>
-                    <a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
+                   <Link to="/Cart"><a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-32
@@ -125,7 +126,7 @@ const ProductV3 = () => {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Add to Cart</a>
+                                               '>Add to Cart</a></Link>
                   </div>
 
                   <div className='flex mx-5'>
