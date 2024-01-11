@@ -1,0 +1,66 @@
+[
+    {
+        "product_id":1,
+        "product_name":"Canvas Bags",  
+        "new_price":"$29.99",
+        "old_price":"$49.99",
+        "product_img":"./src/assets/home/asset 21.png"
+    },
+    {
+        "product_id":2,
+        "product_name":"Media keyboard",
+        "new_price":"$40",
+        "old_price":"$50",
+        "product_img":"./src/assets/home/asset 22.png"
+    },
+    {
+        "product_id":3,
+        "product_name":"HD Camera",
+        "new_price":"$45",
+        "old_price":"$60",
+        "product_img":"./src/assets/home/asset 23.png"
+    },
+    {
+        "product_id":4,
+        "product_name":"BOMBER Jacket",
+        "new_price":"$70",
+        "old_price":"$100",
+        "product_img":"./src/assets/home/asset 24.png"
+    },
+    {
+        "product_id":5,
+        "product_name":"RGB Cherry",
+        "new_price":"$38",
+        "old_price":"$50",
+        "product_img":"./src/assets/home/asset 25.png"
+    },
+    {
+        "product_id":6,
+        "product_name":"Canvas Mouse",
+        "new_price":"$25",
+        "old_price":"$40",
+        "product_img":"./src/assets/home/asset 26.png"
+    },
+    {
+        "product_id":7,
+        "product_name":"Wireless Headphone",
+        "new_price":"$15",
+        "old_price":"$25",
+        "product_img":"./src/assets/home/asset 27.png"
+    },
+    {
+        "product_id":8,
+        "product_name":"3D Bass Meets Clarity",
+        "new_price":"$60",
+        "old_price":"$70",
+        "product_img":"./src/assets/home/asset 28.png"
+    },
+    {
+        "product_id":9,
+        "product_name":"Wall Mount",
+        "new_price":"$30",
+        "old_price":"$30",
+        "product_img":"./src/assets/home/asset 68.png"
+    }
+]
+    

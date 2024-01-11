@@ -12,8 +12,8 @@ function SignUP() {
                 <div className="h-full w-[700px] relative">
                 
                     <span className="absolute ps-10 pt-10">
-                        <a href="">
-                            <img className="h-10" src={logo} alt="" />
+                      <a href="">
+                      <Link to="/"><img className="h-10" src={logo} alt="" /></Link>
                         </a>
 
                         <h1 className="font-bold mt-12 text-2xl">

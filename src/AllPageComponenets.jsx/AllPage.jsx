@@ -1,8 +1,7 @@
 import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import HomePage from "../home/homepage"
-import ShopSidebar from "../shop/shop with sidebar"
-import ShopnoSidebar from "../shop/shop no sidebar"
+
 import ProductV1 from "../shop/produact variation1"
 import ProductV2 from "../shop/product2"
 import ProductV3 from "../shop/product3"
@@ -30,6 +29,11 @@ import Gallerypost from "../Blog/gallarypost"
 import Videopost from "../Blog/videopost"
 import Quotepost from "../Blog/quotepost"
 import Audiopost from "../Blog/audiopost"
+import ShopnoSidebar from "../shop/ShopnoSidebar"
+import ShopWithSidebar from "../shop/ShopWithSidebar"
+import SideCart from "../Components/SideCart"
+import SearchAll from "../Components/SearchAll"
+import ScrollToTop from "../Scrolltotop"
 
 export default function AllPage() {
     return (
@@ -37,10 +41,11 @@ export default function AllPage() {
 
             <div>
                 <BrowserRouter>
+                <ScrollToTop/>
                     <Routes>
                         <Route path="/" element={<HomePage />}></Route>
-                        <Route path="/ShopnoSidebar" element={<ShopnoSidebar />}></Route>
-                        <Route path="/ShopSidebar" element={<ShopSidebar />}></Route>
+                        <Route path="/ShopWithSidebar" element={<ShopWithSidebar/>}></Route>
+                        <Route path="/ShopnoSidebar" element={<ShopnoSidebar/>}></Route>
                         <Route path="/ProductV1" element={<ProductV1 />}></Route>
                         <Route path="/ProductV2" element={<ProductV2 />}></Route>
                         <Route path="/ProductV3" element={<ProductV3 />}></Route>
@@ -69,6 +74,8 @@ export default function AllPage() {
                         <Route path="/Audiopost" element={<Audiopost />}></Route>
 
                         <Route path="/Contact" element={<Contact/>}></Route>
+                        <Route path="/SideCart" element={<SideCart/>}></Route>
+                        <Route path="/SearchAll" element={<SearchAll/>}></Route>
 
                     </Routes>
                 </BrowserRouter>

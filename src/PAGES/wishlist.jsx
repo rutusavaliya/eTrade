@@ -1,29 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../Components/Footer'
-import { English, USD } from "../components/navbar"
+import { TopBar } from '../home'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 
 function Wishlist() {
   return (
     <>
-      <div className=" flex justify-between h-8 text-xs pt-1 bg-black">
-        <div className=" flex">
-          <English />
-          <USD />
-        </div>
-        <div className=" flex justify-between mr-48 text-gray-400 font-semibold">
-          <div>
-            <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-          </div>
-        </div>
-
+     <div>
+        <TopBar />
       </div>
 
       <div>
@@ -36,7 +21,7 @@ function Wishlist() {
         <NavBottom />
       </div>
 
-      <section className='TABLE-LIST'>
+      <section className='TABLE-LIST' id='top'>
                     <div className='container mx-auto my-[100px]'>
                         <div>
                             <h1 className="text-2xl font-semibold text-[#292930]">

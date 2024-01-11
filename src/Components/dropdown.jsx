@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './dropdown.css'
+import "../Components/SideCart"
+import "../Components/SearchAll"
+import "../Components/Dropdown2"
 
 
 const Dropdown = () => {
@@ -35,8 +38,8 @@ const Dropdown = () => {
             <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
             <div className='home-content'>
               <ul className='list bg-white rounded-md'>
-                <li><Link to="/shopsidebar" className='hover:text-[#ff497c]' href="">ShopSidebar</Link></li>
-                <li><Link to="/Shop No Sidebar" className='hover:text-[#ff497c]' href="">ShopNoSidebar</Link></li>
+                <li><Link to="/ShopWithSidebar" className='hover:text-[#ff497c]' href="">ShopWithSidebar</Link></li>
+                <li><Link to="/ShopnoSidebar" className='hover:text-[#ff497c]' href="">ShopnoSidebar</Link></li>
                 <li><Link to="/ProductV1" className='hover:text-[#ff497c]' href="">Product Variation 1</Link></li>
                 <li><Link to="/ProductV2" className='hover:text-[#ff497c]' href="">Product Variation 2</Link></li>
                 <li><Link to="/ProductV3" className='hover:text-[#ff497c]' href="">Product Variation 3</Link></li>
@@ -99,16 +102,17 @@ const Dropdown = () => {
         {/* nav icon  */}
         <div className='text-2xl text-gray-600 flex justify-between w-[160px] h-10'>
           <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-            <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-search-line "></i></li>
+           <Link to="/SearchAll"> <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-search-line "></i></li></Link>
           </ul>
           <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-            <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-heart-line "></i></li>
+           <Link to="/Wishlist"> <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-heart-line "></i></li></Link>
           </ul>
           <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-            <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-shopping-cart-line "></i></li>
+           <Link to="/SideCart"><li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-shopping-cart-line "></i></li></Link> 
+           <h1 className='absolute h-5 w-5 rounded-full -top-1 -right-4 ring-2 ring-white bg-blue-600 text-xs p-1 text-white pt-0.5'>30</h1>
           </ul>
           <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-            <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-user-3-line "></i></li>
+           <Link to="/Dropdown2"><li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-user-3-line "></i></li></Link> 
           </ul>
         </div>
       </div>

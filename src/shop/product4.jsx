@@ -1,4 +1,5 @@
-import { English, USD } from "../components/navbar"
+import React, { useReducer } from 'react'
+import { TopBar } from "../home";
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from "../Components/components";
 import { Link } from "react-router-dom";
@@ -9,25 +10,26 @@ import parsal from '../assets/shop/parsal.png'
 
 
 const ProductV4 = () => {
+  const initialState = {
+    firstCounter: 1,
+  }
+  const reducer = (state, action) => {
+    switch (action.type) {
+
+      case 'inc1':
+        return { ...state, firstCounter: state.firstCounter + action.value }
+      case 'dec1':
+        return { ...state, firstCounter: state.firstCounter - action.value }
+
+      default:
+        return state;
+    }
+  }
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-      <div className=" flex justify-between h-8 text-xs pt-1 bg-black">
-        <div className=" flex">
-          <English />
-          <USD />
-        </div>
-        <div className=" flex justify-between mr-28 text-gray-400 font-semibold">
-          <div>
-            <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-          </div>
-        </div>
-
+      <div>
+        <TopBar />
       </div>
 
       <div>
@@ -40,9 +42,9 @@ const ProductV4 = () => {
         <NavBottom />
       </div>
 
-      <section className='IMAGES-AND-DISCRIPTION  bg-[#F9F3F0] container mx-auto '>
-        <div className='grid grid-cols-2 gap-10 pt-[60px] px-24 '>
-          <div className='main-div-photos'>
+      <section className='IMAGES-AND-DISCRIPTION   bg-[#F9F3F0]  '>
+        <div className='grid grid-cols-2 gap-10 pt-[60px] px-24 container mx-auto '>
+          <div className='main-div-photos '>
             <div className='flex justify-between items-center'>
               <div className='hover:scale-110 duration-300'>
                 <a href="#" className='text-gray-500 '><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md"></i></a>
@@ -107,14 +109,24 @@ const ProductV4 = () => {
                 </ul>
               </div>
               <div className='flex justify-between items-center'>
-                <div className='flex items-center'>
-                  <span className='bg-gray-100 py-[4px] px-[12px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>-</span>
-                  <h1 className='font-semibold text-lg mx-5'>1</h1>
-                  <span className='bg-gray-100 py-[4px] px-[10px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>+</span>
-                </div>
-                <div className='flex items-center'>
-                  <div className='mx-5'>
-                  <Link to="/Cart"><a href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
+                                    <div className='flex items-center '>
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
+                                            if (count.firstCounter > 0) {
+                                                dispatch({ type: 'dec1', value: 1 });
+                                            }
+                                        }}>
+                                            <i class="fa-solid fa-minus text-xs"></i>
+                                        </button>
+
+                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
+
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
+                                            <i class="fa-solid fa-plus text-xs"></i>
+                                        </button>
+                                    </div>
+                                    <div className='flex items-center'>
+                                        <div className='mx-5'>
+                                            <Link to="/Cart" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-20 py-5 rounded-md 
                                                 before:absolute
                                                 before:content-[""]
                                                 before:px-32
@@ -128,11 +140,11 @@ const ProductV4 = () => {
                                                 before:hover:scale-105
                                                 before:duration-300
                                                 before:rounded-md
-                                               '>Add to Cart</a></Link> 
-                  </div>
+                                               '>Add to Cart</Link>
+                                        </div>
 
-                  <div className='flex mx-5'>
-                    <a href="#" className='relative z-10 px-1 py-3 border-2 rounded-md
+                                        <div className='flex mx-5'>
+                                            <Link to="/Wishlist" href="#" className='relative z-10 px-1 py-3 border-2 rounded-md
                                                 before:absolute 
                                                 before:h-[100%]
                                                 before:w-[100%]
@@ -140,18 +152,19 @@ const ProductV4 = () => {
                                                 before:bg-[#3577F0]
                                                 before:scale-0 
                                                 before:-z-10
-                                                before:hover:scale-105
+                                                   before:hover:scale-105
                                                 before:duration-300
                                                 before:top-0
                                                 before:bottom-0
                                                 before:left-0
                                                 before:right-0
                                                 '>
-                      <i class="ri-heart-line text-2xl px-4 py-4  text-gray-600 hover:border-none hover:text-white duration-300"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+                                                <i class="ri-heart-line text-2xl px-4 py-4  text-gray-600 hover:border-none hover:text-white duration-300"></i>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+
 
               <div className='mt-10'>
                 <h1 className='text-[#3577F0] font-bold text-2xl tracking-wide mb-8'>Description</h1>
@@ -165,7 +178,7 @@ const ProductV4 = () => {
                 </div>
               </div>
 
-              <div className='flex'>
+              <div className='flex mb-24'>
                 <div className='mr-10'>
                   <div className='flex justify-center items-center h-16 w-16 bg-white rounded-full mb-5'>
                     <img className='h-8' src={Fimg3} alt="" />
@@ -194,10 +207,10 @@ const ProductV4 = () => {
       </section>
 
       <Components />
-<div className=" container mx-auto">
-      <Footer />
+      <div className=" container mx-auto">
+        <Footer />
 
-</div>
+      </div>
     </>
   );
 };

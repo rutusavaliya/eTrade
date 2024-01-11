@@ -15,7 +15,7 @@ import bimg from '../assets/Blog/bimg.png'
 import news1 from '../assets/blog/news1.png'
 import news2 from '../assets/blog/news2.png'
 import news3 from '../assets/blog/news3.png'
-import { English, USD } from "../components/navbar"
+import { TopBar } from '../home'
 import { Link } from 'react-router-dom'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from '../Components/components'
@@ -23,25 +23,9 @@ import Components from '../Components/components'
 function Quotepost() {
   return (
     <>
-      <div className=" flex justify-between h-8 text-xs pt-1 bg-black">
-        <div className=" flex">
-          <English />
-          <USD />
-        </div>
-        <div className=" flex justify-between mr-28 text-gray-400 font-semibold">
-          <div>
-            <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-          </div>
-        </div>
-
+       <div>
+        <TopBar />
       </div>
-
       <div>
         <div>
           <Dropdown1 />
@@ -67,26 +51,26 @@ function Quotepost() {
         </div>
 
         <div className='flex justify-between mt-10'>
-        <div className='NAV-ICON col-span-1 pr-10 h-60 sticky top-28'>
-                            <h1 className='text-gray-500 text-lg  text-center'>Share on:</h1>
-                            <div className='text-center'>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><i class="ri-facebook-fill text-xl "></i></li>
-                                </ul>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><i class="ri-instagram-line text-xl "></i></li>
-                                </ul>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><i class="ri-twitter-fill text-xl "></i></li>
-                                </ul>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><i class="ri-linkedin-fill text-xl "></i></li>
-                                </ul>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><i class="ri-discord-line text-xl "></i></li>
-                                </ul>
-                            </div>
-                        </div>
+          <div className='NAV-ICON col-span-1 pr-10 h-60 sticky top-28'>
+            <h1 className='text-gray-500 text-lg  text-center'>Share on:</h1>
+            <div className='text-center'>
+              <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-facebook-fill text-xl "></i></a></li>
+              </ul>
+              <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-instagram-line text-xl "></i></a></li>
+              </ul>
+              <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-twitter-fill text-xl "></i></a></li>
+              </ul>
+              <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-linkedin-fill text-xl "></i></a></li>
+              </ul>
+              <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-discord-line text-xl "></i></a></li>
+              </ul>
+            </div>
+          </div>
 
           <div className='left-section   '>
 
@@ -287,7 +271,7 @@ function Quotepost() {
                 <h1 className='mt-3'>Latest Posts</h1>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                   <Link to="/Standrdpost" ><img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img></Link>
+                    <Link to="/Standrdpost" ><img className='w-24  h-16 group-hover:scale-110 duration-500' src={blog} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
                     <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
@@ -300,7 +284,7 @@ function Quotepost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                   <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img></Link> 
+                    <Link to="/Standrdpost"><img className='w-24  h-16 group-hover:scale-110 duration-500' src={bimg3} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
                     <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
@@ -313,7 +297,7 @@ function Quotepost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                   <Link to="/Standrdpost">  <img className='w-32  h-20 group-hover:scale-110 duration-500' src={blog1} alt=""></img></Link>
+                    <Link to="/Standrdpost">  <img className='w-32  h-20 group-hover:scale-110 duration-500' src={blog1} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
                     <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Dubai’s FRAME Offers its <br></br> Take on the</Link>
@@ -332,7 +316,7 @@ function Quotepost() {
                 <h1 className='mt-3'>Latest Posts</h1>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                   <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img></Link>
+                    <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={tshirt} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
                     <Link to="/Standrdpost" href='#' className='text-lg hover:text-blue-500 duration-500 font-semibold '>Men's Fashion Tshirt</Link>
@@ -358,7 +342,7 @@ function Quotepost() {
                 </div>
                 <div className='flex mt-3 group'>
                   <a href="#" className=' w-24 h-16 overflow-hidden rounded-md '>
-                   <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img></Link> 
+                    <Link to="/Standrdpost"> <img className='w-24  h-16 group-hover:scale-110 duration-500' src={shoes2} alt=""></img></Link>
                   </a>
                   <div className='ml-3'>
                     <Link to="/Standrdpost" href='#' className='text-lg  hover:text-blue-500 duration-500 font-semibold '>Addidas Shoes</Link>
@@ -443,7 +427,7 @@ function Quotepost() {
           <div className='grid grid-cols-3 gap-10'>
             <div>
               <img className='w-full rounded-lg mb-10' src={news1} alt="" />
-             <Link to="/Standrdpost"> <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1></Link>
+              <Link to="/Standrdpost"> <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1></Link>
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={image1} alt="" />
                 <div>
@@ -454,7 +438,7 @@ function Quotepost() {
             </div>
             <div>
               <img className='w-full rounded-lg mb-10' src={news2} alt="" />
-             <Link to="/Standrdpost"> <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1></Link>
+              <Link to="/Standrdpost"> <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1></Link>
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={bimg} alt="" />
                 <div>
@@ -465,7 +449,7 @@ function Quotepost() {
             </div>
             <div>
               <img className='w-full rounded-lg mb-10' src={news3} alt="" />
-              <Link to="/Standrdpost"><h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1></Link> 
+              <Link to="/Standrdpost"><h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1></Link>
               <div className='flex items-center mb-7  py-10'>
                 <img className='bg-cover w-12 mr-5 rounded-full' src={bimg5} alt="" />
                 <div>
@@ -476,9 +460,9 @@ function Quotepost() {
             </div>
           </div>
         </div>
-<div>
-  <Components/>
-</div>
+        <div>
+          <Components />
+        </div>
 
         <div>
           <Footer />

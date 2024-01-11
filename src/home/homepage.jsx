@@ -1,4 +1,4 @@
-import { English, USD } from '../home'
+import { TopBar } from '../home'
 import Poster1 from '../assets/home/Poster1.png';
 import Poster2 from '../assets/home/Poster2.png';
 import giftbox from '../assets/home/giftbox.png';
@@ -10,36 +10,57 @@ import Footer from '../Components/Footer';
 import Components from '../Components/components';
 import './homepage.css'
 import Dropdown from '../Components/dropdown';
+import { Link } from 'react-router-dom';
+import DoubleSlide from '../Components/doubleslide';
+import FeedBack from '../Components/Feedback';
+import HomeSlideProduct from '../Components/HomeSlideProduct';
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 
 function HomePage() {
     return (
         <>
-            <div className='flex'>
-                 <div className=" flex">
-                    <English />
-                    <USD />
-                </div> 
-                {/* <div className="flex text-gray-400 font-semibold">
-                    <div>
-                        <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-                    </div>
-                    <div>
-                        <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-                    </div>
-                    <div>
-                        <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-                    </div>
-                </div> */}
-            </div>
-            <div className='sticky top-2 z-50'>
+            {/* <div className='HOME-DROPDOWN py-2'>
+                <TopBar />
+            </div> */}
+            <div className='sticky top-2 z-30'>
                 <Dropdown />
             </div>
             <section className='HERO-SECTION  -top-36 h-[850px]  relative container mx-auto overflow-hidden '>
                 <div className='BACKGROUND-IMG'>
                     <img className='absolute right-96 -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
                     <img className='absolute right-10 -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
+                    <div>
+                        <div className='absolute right-[400px] bottom-40'>
+                            <img className=' w-[450px]' src="./src/assets/Home/headphone.png" alt="" />
+                            <div className='absolute top-[15%] left-[30%] bg-white rounded-full'>
+                                <div className='h-28 w-28 flex justify-center items-center'>
+                                    <div>
+                                        <h1 className='text-gray-500 text-lg text-center'>From</h1>
+                                        <h1 className='text-[#3577F0] text-xl  font-semibold'>$49.00</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img className='w-48 absolute right-[270px] bottom-32' src="./src/assets/Home/watch.png" alt="" />
+                        </div>
+                    </div>
+                    <div className='absolute left-[45%] bottom-10'>
+                        <ul>
+                            <li className='w-[34px] h-[4px] bg-[#FE98AC] rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                            <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                            <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                            <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                        </ul>
+                    </div>
                 </div>
+
+
                 <div className="container mx-auto">
                     <div className='BACKGROUND-DETAIL absolute top-96'>
                         <div className='flex mb-4'>
@@ -50,7 +71,7 @@ function HomePage() {
 
                         <div className='flex items-center'>
                             <div className="BUTTON">
-                                <a href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
+                                <a href="#" className="px-9 py-5 z-10 border border-black bg-[#ffffff] font-bold rounded-md relative 
                                 before:absolute
                                 before:contetn-['']
                                 before:px-10
@@ -93,9 +114,72 @@ function HomePage() {
                         </div>
                     </div>
                 </div>
+
             </section>
+            <section className='CATEGORIES container mx-auto '>
+                <div className=' mb-[200px]'>
+                    <div className='flex mb-3'>
+                        <i className="ri-price-tag-3-line h-6 w-6 text-base border bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
+                        <h1 className='text-[#FF497C] font-bold text-sm flex items-center ml-2'>Categories</h1>
+                    </div>
+                    <div className='flex justify-between items-center'>
+                        <h1 className="font-bold text-4xl text-[#292930] mb-[30px]">Browse by Category</h1>
+                        <div className='text-gray-400'>
+                            <div className='hover:scale-110 duration-300 inline-block'>
+                                <a href="#" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                            </div>
+                            <div className='hover:scale-110 duration-300 inline-block '>
+                                <a href="#" className=''><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
-
+                    <div className="grid grid-cols-7 gap-x-10 mt-10">
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer ">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Phones</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 16.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Computers</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 17.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Accessories</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 18.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Laptops</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 19.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Monitors</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 10.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>Networking</p>
+                        </a>
+                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                            <div className="flex justify-center">
+                                <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
+                            </div>
+                            <p className='text-gray-800'>PC Gaming</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
             <section className='HEADPHONES-PHOTO container mx-auto  mb-[100px]  mt-28 '>
                 <div className='relative  w-[100%] h-[450px] rounded-md bg-[#F6F7FB] '>
                     <img className='absolute right-20 -top-28 w-96' src="./src/assets/home/asset 20.png" alt="" />
@@ -153,73 +237,23 @@ function HomePage() {
                     </div>
                 </div>
             </section>
-
-            <section className='FEED-BACK container mx-auto'>
-                <div className='bg-[#F9F3F0]  px-24 py-24'>
-                    <div className="flex justify-between ">
-                        <div className='mb-10'>
-                            <p className="text-[#FF497C] font-medium mb-2"><i class="ri-double-quotes-l bg-[#FF497C] p-1 text-white rounded-full text-center mr-3"></i>Testimonials</p>
-                            <h1 className="font-bold text-4xl text-[#292930]  tracking-wide">Users Feedback</h1>
-                        </div>
-                        <div className='text-gray-400'>
-                            <a href="#"><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                            <a href="#"><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                        </div>
-                    </div>
-
-                    <div className='grid grid-cols-3 gap-8'>
-                        <div>
-                            <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
-                                <p className='text-xs'>“ It’s amazing how much easier it has been to
-                                    meet new people and create instantly non
-                                    connections. I have the exact same personal
-                                    the only thing that has changed is my mind
-                                    set and a few behaviors. “</p>
-                            </div>
-                            <div className='flex items-center mt-10'>
-                                <img className='w-10' src="./src/assets/home/asset 31.png" alt="" />
-                                <div className='ml-5'>
-                                    <h1 className='text-gray-500'>Head Of Idea</h1>
-                                    <h1 className='font-semibold text-lg text-[#292930] tracking-wide'>James C. Anderson</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='mt-10'>
-                            <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
-                                <p className='text-xs'>“ It’s amazing how much easier it has been to
-                                    meet new people and create instantly non
-                                    connections. I have the exact same personal
-                                    the only thing that has changed is my mind
-                                    set and a few behaviors. “</p>
-                            </div>
-                            <div className='flex items-center mt-10'>
-                                <img className='w-10 ' src="./src/assets/home/asset 29.png" alt="" />
-                                <div className='ml-5'>
-                                    <h1 className='text-gray-500'>Head Of Idea</h1>
-                                    <h1 className='font-semibold text-lg text-[#292930] tracking-wider'>James C. Anderson</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
-                                <p className='text-xs'>“ It’s amazing how much easier it has been to
-                                    meet new people and create instantly non
-                                    connections. I have the exact same personal
-                                    the only thing that has changed is my mind
-                                    set and a few behaviors. “</p>
-                            </div>
-                            <div className='flex items-center mt-10'>
-                                <img className='w-10' src="./src/assets/home/asset 30.png" alt="" />
-                                <div className='ml-5'>
-                                    <h1 className='text-gray-500'>Head Of Idea</h1>
-                                    <h1 className='font-semibold text-lg text-[#292930] tracking-wider'>James C. Anderson</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <section className='JSONDATA Double-slide'>
+                <DoubleSlide />
             </section>
+
+            <section className='FEED-BACK'>
+                <FeedBack />
+            </section>
+
+            <section className='JSONDATA Single slide my-[100px]'>
+                <HomeSlideProduct />
+            </section>
+
+
+          
+
+
+
 
             {/* <Trade section start ----------------------------------> */}
 
@@ -238,7 +272,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                        <Link to="/Productv1">  <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -254,13 +288,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Media Remote</a>
+                                    <Link to="/ProductV1"><a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Media Remote</a></Link>
                                     <p className='text-sm font-bold'>$29.99 <span className='text-gray-300 ml-2'><del>$49.99</del></span></p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"><a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"><a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -268,7 +302,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                        <Link to="/ProductV1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -284,13 +318,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>50+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>HD Camera</a>
+                                    <Link to="/ProductV1"><a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>HD Camera</a></Link>
                                     <p className='text-sm font-bold'>$49.99 </p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"> <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"> <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -303,7 +337,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                        <Link to="/ProductV1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 34.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -319,13 +353,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>120+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Gaming Controller</a>
+                                    <Link to="/ProductV1"> <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Gaming Controller</a></Link>
                                     <p className='text-sm font-bold'>$29.99 <span className='text-gray-300 ml-2'></span></p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"><a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"> <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -333,7 +367,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                        <Link to="/ProductV1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 35.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -349,13 +383,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>30+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wall Mount</a>
+                                    <Link to="/ProductV1"> <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wall Mount</a></Link>
                                     <p className='text-sm font-bold'>$49.99 </p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"><a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"> <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -368,7 +402,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                        <Link to="/Productv1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 36.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -384,13 +418,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>700+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Lenevo Laptop</a>
+                                    <Link TO="/productV1"><a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Lenevo Laptop</a></Link>
                                     <p className='text-sm font-bold'>$999.99 <span className='text-gray-300 ml-2'></span></p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"> <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"> <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -398,7 +432,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                        <Link to="/ProductV1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 37.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -414,13 +448,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>300+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Juice Grinder Machine</a>
+                                    <Link to="/ProductV1"> <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Juice Grinder Machine</a></Link>
                                     <p className='text-sm font-bold'>$99.99 </p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"><a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"><a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -433,7 +467,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                        <Link to="/ProductV1"><img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 38.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -449,13 +483,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wireless Headphone</a>
+                                    <Link to="/ProductV1"><a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wireless Headphone</a></Link>
                                     <p className='text-s font-bold'>$59.99 <span className='text-gray-300 ml-2'></span></p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"> <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"><a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 
@@ -463,7 +497,7 @@ function HomePage() {
                             <div className='flex items-center '>
                                 <div className='overflow-hidden rounded-md'>
                                     <a href="#">
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                        <Link to="/ProductV1"> <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 39.png" alt="" /></Link>
                                     </a>
                                 </div>
                                 <div className='pl-8 leading-7'>
@@ -479,13 +513,13 @@ function HomePage() {
                                             <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                         </div>
                                     </div>
-                                    <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Asus Zenbook Laptop</a>
+                                    <Link to="/ProductV1"> <a href="#" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Asus Zenbook Laptop</a></Link>
                                     <p className='text-sm font-bold'>$49.99 </p>
                                 </div>
                             </div>
                             <div >
-                                <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                <Link to="/Cart"> <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
+                                <Link to="/Wishlist"> <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a></Link>
                             </div>
                         </div>
 

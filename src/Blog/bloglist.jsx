@@ -11,29 +11,16 @@ import blogimg from '../assets/Blog/blogimg.png'
 import bimg from '../assets/Blog/bimg.png'
 import image1 from '../assets/Blog/image1.png'
 import bimg1 from '../assets/Blog/bimg1.png'
-import { English, USD } from "../components/navbar"
+import { TopBar } from '../home'
 import { Link } from 'react-router-dom'
 import { Dropdown1, NavBottom } from "../components/navbar1"
+import Speaker from '../Components/speaker'
 
 function Bloglist() {
   return (
     <>
-      <div className=" flex justify-between h-8 text-xs pt-1 bg-black container mx-auto">
-        <div className=" flex">
-          <English />
-          <USD />
-        </div>
-        <div className=" flex justify-between  text-gray-400 font-semibold">
-          <div>
-            <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-          </div>
-        </div>
+      <div>
+        <TopBar />
       </div>
 
       <div>
@@ -45,17 +32,10 @@ function Bloglist() {
       <div>
         <NavBottom />
       </div>
-<div className=' container mx-auto'>
-      <div className='bg-[#f8f8f8] flex justify-between h-40'>
-        <div className='ml-10 mt-16'>
-          <h1 className='text-[40px] font-semibold ml-28'>Blog List</h1>
-        </div>
-        <div className='mt-10 mr-36 w-24'>
-          <img src={blogimg} alt="">
-          </img>
-        </div>
-      </div>
-</div>
+
+      <section className='CONTACT-SPEAKER'>
+                    <Speaker p1="Blog" p2="Blog List" />
+                </section>
 
 <div className=' container mx-auto'>
       <div className='flex  mt-10 justify-center'>

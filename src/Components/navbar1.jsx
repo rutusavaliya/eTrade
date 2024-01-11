@@ -1,11 +1,14 @@
 import Logos from "../assets/page/logos.png"
 import navimg from '../assets/components/navimg.png'
 import '../components/navbar1.css'
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 
 export function Dropdown1() {
+
+    const active = 'text-[#ff497c]'
+    const normal = 'text-black'
     return (
 
         <div className=" container mx-auto w-full">
@@ -17,7 +20,7 @@ export function Dropdown1() {
                 </div>
 
 
-                <div className='grid grid-cols-7 gap-x-9 text-xs font-semibold'>
+                <div className='grid grid-cols-6 gap-x-9 text-sm font-semibold'>
                     <div className='home-dropdown'>
                         <button className='font-semibold underline decoration-[2px] underline-offset-4 h-24 '><span className='text-gray-800 hover:text-black'>Home</span><i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
                         <div className='home-content'>
@@ -38,16 +41,15 @@ export function Dropdown1() {
                         <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
                         <div className='home-content'>
                             <ul className='list bg-white rounded-md'>
-                                <li><Link to="/" className='hover:text-[#ff497c]' href="">Shop With Sidebar</Link></li>
-                                <li><a className='hover:text-[#ff497c]' href="">Shop No Sidebar</a></li>
-                                <li><Link to="/ProductV1" className='hover:text-[#ff497c]' href="">Product Variation 1</Link></li>
-                                <li><Link to="/ProductV2" className='hover:text-[#ff497c]' href="">Product Variation 2</Link></li>
-                                <li><Link to="/ProductV3" className='hover:text-[#ff497c]' href="">Product Variation 3</Link></li>
-                                <li><Link to="/ProductV4" className='hover:text-[#ff497c]' href="">Product Variation 4</Link></li>
-                                <li><Link to="/ProductV5" className='hover:text-[#ff497c]' href="">Product Variation 5</Link></li>
-                                <li><Link to="/ProductV6" className='hover:text-[#ff497c]' href="">Product Variation 6</Link></li>
-                                <li><Link to="/ProductV7" className='hover:text-[#ff497c]' href="">Product Variation 7</Link></li>
-                                <li><Link to="/ProductV8>" className='hover:text-[#ff497c]' href="">Product Variation 8</Link></li>
+                                <li><NavLink to="/ShopWithSidebar" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ShopWithSidebar</a></NavLink></li>
+                                <li><NavLink to="/ShopnoSidebar" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ShopnoSidebar</a></NavLink></li>
+                                <li><NavLink to="/ProductV1" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV1</a></NavLink></li>
+                                <li><NavLink to="/ProductV2" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV2</a></NavLink></li>
+                                <li><NavLink to="/ProductV3" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV3</a></NavLink></li>
+                                <li><NavLink to="/ProductV4" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV4</a></NavLink></li>
+                                <li><NavLink to="/ProductV5" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV5</a></NavLink></li>
+                                <li><NavLink to="/ProductV6" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV6</a></NavLink></li>
+                                <li><NavLink to="/ProductV7" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">ProductV7</a></NavLink></li>
                             </ul>
                         </div>
                     </div>
@@ -56,24 +58,25 @@ export function Dropdown1() {
                         <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
                         <div className='home-content'>
                             <ul className='list bg-white rounded-md'>
-                                <li><Link to="/Wishlist" className='hover:text-[#ff497c]' href="">Wishlist</Link></li>
-                                <li><Link to="/Cart" className='hover:text-[#ff497c]' href="">Cart</Link></li>
-                                <li><Link to="/Checkout" className='hover:text-[#ff497c]' href="">Checkout</Link></li>
-                                <li><Link to="/Account" className='hover:text-[#ff497c]' href="">Account</Link></li>
-                                <li><Link to="/SignUP" className='hover:text-[#ff497c]' href="">Sign UP</Link></li>
-                                <li><Link to="/Signin" className='hover:text-[#ff497c]' href="">Sign in </Link></li>
-                                <li><Link to="/Forgot" className='hover:text-[#ff497c]' href="">Forgot Password</Link></li>
-                                <li><Link to="/Reset" className='hover:text-[#ff497c]' href="">Reset Password</Link></li>
-                                <li><Link to="/policy" className='hover:text-[#ff497c]' href="">Privacy policy</Link></li>
-                                <li><Link to="/Comingsoon" className='hover:text-[#ff497c]' href="">Coming soon</Link></li>
-                                <li><Link to="/Error" className='hover:text-[#ff497c]' href="">404 Error</Link></li>
-                                <li><Link to="/Typography" className='hover:text-[#ff497c]' href="">Typography</Link></li>
+                                <li><NavLink to="/Wishlist" className={({ isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Wishlist</a></NavLink></li>
+                                <li><NavLink to="/Cart" className={({ isActive }) => isActive ? active : normal
+                                }><a className='hover:text-[#ff497c]' href="">Cart</a></NavLink></li>
+                                <li><NavLink to="/Checkout" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Checkout</a></NavLink></li>
+                                <li><NavLink to="/Account" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Account</a></NavLink></li>
+                                <li><NavLink to="/SignUP" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Sign UP</a></NavLink></li>
+                                <li><NavLink to="/Signin" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Sign in</a> </NavLink></li>
+                                <li><NavLink to="/Forgot" className={({isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Forgot Password</a></NavLink></li>
+                                <li><NavLink to="/Reset" className={({isActive }) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Reset Password</a></NavLink></li>
+                                <li><NavLink to="/policy" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Privacy policy</a></NavLink></li>
+                                <li><NavLink to="/Comingsoon" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Coming soon</a></NavLink></li>
+                                <li><NavLink to="/Error" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">404 Error</a></NavLink></li>
+                                <li><NavLink to="/Typography" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Typography</a></NavLink></li>
                             </ul>
                         </div>
                     </div>
 
                     <div className='home-dropdown text-gray-800'>
-                        <button className='navbar-button font-semibold h-24'>About</button>
+                       <NavLink to="/About"><button className='navbar-button font-semibold h-24'>About</button></NavLink>
                     </div>
 
                     <div className='home-dropdown text-gray-800 '>
@@ -81,19 +84,19 @@ export function Dropdown1() {
                         <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
                         <div className='home-content'>
                             <ul className='list bg-white rounded-md'>
-                                <li><Link to="/Bloglist" className='hover:text-[#ff497c]' href="">Blog List</Link></li>
-                                <li><Link to="/Bloggrid" className='hover:text-[#ff497c]' href="">Blog Grid</Link></li>
-                                <li><Link to="/Standrdpost" className='hover:text-[#ff497c]' href="">Standard Post</Link></li>
-                                <li><Link to="/Gallerypost" className='hover:text-[#ff497c]' href="">Gallery Post</Link></li>
-                                <li><Link to="/Videopost" className='hover:text-[#ff497c]' href="">Video Post</Link></li>
-                                <li><Link to="/Audiopost" className='hover:text-[#ff497c]' href="">Audio Post</Link></li>
-                                <li><Link to="/Quotepost" className='hover:text-[#ff497c]' href="">Quote Post</Link></li>
+                                <li><NavLink to="/Bloglist" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Blog List</a></NavLink></li>
+                                <li><NavLink to="/Bloggrid" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Blog Grid</a></NavLink></li>
+                                <li><NavLink to="/Standrdpost" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Standard Post</a></NavLink></li>
+                                <li><NavLink to="/Gallerypost" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Gallery Post</a></NavLink></li>
+                                <li><NavLink to="/Videopost" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Video Post</a></NavLink></li>
+                                <li><NavLink to="/Audiopost" className={({isActive}) => isActive ? active : normal}><a className='hover:text-[#ff497c]' href="">Audio Post</a></NavLink></li>
+                                <li><NavLink to="/Quotepost" className={({isActive}) => isActive ? active  : normal}><a className='hover:text-[#ff497c]' href="">Quote Post</a></NavLink></li>
                             </ul>
                         </div>
                     </div>
 
                     <div className='home-dropdown text-gray-800  '>
-                        <button className='navbar-button font-semibold h-24'>Contact</button>
+                       <NavLink to="/Contact"> <button className='navbar-button font-semibold h-24'>Contact</button></NavLink>
                     </div>
 
                 </div>
@@ -113,6 +116,7 @@ export function Dropdown1() {
                     </ul>
                     <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100  '>
                         <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-shopping-cart-line "></i></li>
+                        <h1 className='absolute h-5 w-5 rounded-full -top-1 -right-4 ring-2 ring-white bg-blue-600 text-xs p-1 text-white pt-0.5'>30</h1>
                     </ul>
                     <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100 '>
                         <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-user-3-line "></i></li>
@@ -120,6 +124,7 @@ export function Dropdown1() {
                 </div>
             </div>
         </div>
+        
     )
 }
 

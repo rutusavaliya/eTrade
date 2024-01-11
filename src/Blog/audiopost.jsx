@@ -18,29 +18,15 @@ import news2 from '../assets/blog/news2.png'
 import news3 from '../assets/blog/news3.png'
 import music from '../assets/blog/music.mp3'
 import { Link } from 'react-router-dom'
-import { English, USD } from "../components/navbar"
+import { TopBar } from '../home'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from '../Components/components'
 
 function Audiopost() {
   return (
     <>
-      <div className=" flex justify-between h-8 text-xs pt-1 bg-black  container mx-auto">
-        <div className=" flex">
-          <English />
-          <USD />
-        </div>
-        <div className=" flex justify-between  text-gray-400 font-semibold">
-          <div>
-            <a href="#" className="py-1.5 px-3 flex  items-center cursor-pointer hover:text-blue-600 duration-500 ">Help</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Join US</a>
-          </div>
-          <div>
-            <a href="#" className="py-1.5 px-3 flex items-center cursor-pointer hover:text-blue-600 duration-500 ">Sign In</a>
-          </div>
-        </div>
+      <div>
+        <TopBar />
       </div>
       <div>
         <div>
@@ -61,19 +47,19 @@ function Audiopost() {
             <h1 className='text-gray-500 text-lg  text-center'>Share on:</h1>
             <div className='text-center'>
               <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                <li className='nav-icon flex justify-center items-center'><i class="ri-facebook-fill text-xl "></i></li>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-facebook-fill text-xl "></i></a></li>
               </ul>
               <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                <li className='nav-icon flex justify-center items-center'><i class="ri-instagram-line text-xl "></i></li>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-instagram-line text-xl "></i></a></li>
               </ul>
               <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                <li className='nav-icon flex justify-center items-center'><i class="ri-twitter-fill text-xl "></i></li>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-twitter-fill text-xl "></i></a></li>
               </ul>
               <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                <li className='nav-icon flex justify-center items-center'><i class="ri-linkedin-fill text-xl "></i></li>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-linkedin-fill text-xl "></i></a></li>
               </ul>
               <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                <li className='nav-icon flex justify-center items-center'><i class="ri-discord-line text-xl "></i></li>
+                <li className='nav-icon flex justify-center items-center'><a href='#top'><i class="ri-discord-line text-xl "></i></a></li>
               </ul>
             </div>
           </div>
