@@ -7,6 +7,7 @@ import Footer from "../Components/Footer"
 import Fimg3 from '../assets/shop/Fimg3.png'
 import Fimg2 from '../assets/shop/Fimg2.png'
 import parsal from '../assets/shop/parsal.png'
+import ShopJsonSlide from './shopjsonslide';
 
 
 const ProductV4 = () => {
@@ -205,6 +206,10 @@ const ProductV4 = () => {
 
         </div>
       </section>
+
+      <section className='JSONDATA'>
+    <ShopJsonSlide/>
+   </section>
 
       <Components />
       <div className=" container mx-auto">

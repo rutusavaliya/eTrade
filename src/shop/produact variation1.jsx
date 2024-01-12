@@ -16,6 +16,7 @@ import Footer from '../Components/Footer'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 import Components from '../Components/components'
 import { TopBar } from '../home'
+import ShopJsonSlide from './shopjsonslide'
 
 
 const ProductV1 = () => {
@@ -42,7 +43,7 @@ const ProductV1 = () => {
         <TopBar />
       </div>
       <div>
-        <div className=''>
+        <div>
           <Dropdown1 />
 
         </div>
@@ -204,6 +205,11 @@ const ProductV1 = () => {
           </div>
         </div>
       </section>
+
+   <section className='JSONDATA'>
+    <ShopJsonSlide/>
+   </section>
+
 
       <Components />
       <div className=' container mx-auto'>

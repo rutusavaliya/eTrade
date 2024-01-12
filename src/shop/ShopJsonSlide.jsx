@@ -1,20 +1,17 @@
 import React from 'react'
 import DataJson from '../Data.json'
-import { Link } from 'react-router-dom'
-import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick'
 
-
-const DoubleSlide = () => {
+const ShopJsonSlide = () => {
     const settings = {
-        slidesToScroll: 5,  
         infinite: true,
         slidesToShow: 4,
+        slidesToScroll: 4,
         speed: 500,
-        slidesPerRow: 2
     };
 
     let slider;
-
     const handlePrev = () => {
         slider.slickPrev();
     };
@@ -26,12 +23,12 @@ const DoubleSlide = () => {
     return (
         <>
             <div>
-                <div className='pb-7'>
+                <div className='pt-24 pb-7'>
                     <div className='container mx-auto'>
                         <div className="flex justify-between mb-5">
-                            <div className='mb-16'>
-                                <p className="text-[#8C71DB] font-medium mb-2"><i class="ri-shopping-basket-2-line bg-[#8C71DB] p-1 text-white rounded-full text-center mr-3"></i>Our Products</p>
-                                <h1 className="font-bold text-4xl text-[#292930]  tracking-wide">Explore our Products</h1>
+                            <div className='mb-10'>
+                                <p className="text-[#8C71DB] font-medium mb-2"><i class="ri-shopping-basket-2-line bg-[#8C71DB] p-1 text-white rounded-full text-center mr-3"></i>Your Recentls</p>
+                                <h1 className="font-bold text-4xl text-[#292930]  tracking-wide">Viewed Items</h1>
                             </div>
                             <div className='text-gray-400 pt-10'>
                                 <div className='hover:scale-110 duration-300 inline-block'>
@@ -46,17 +43,17 @@ const DoubleSlide = () => {
                         <div className=''>
                             <Slider ref={(c) => (slider = c)} {...settings}>
                                 {
-                                    DataJson.slice(0, 10).map(Data => {
+                                    DataJson.slice(0, 8).map(Data => {
                                         return (
                                             <>
                                                 <div className='group mb-10'>
                                                     <div className='relative overflow-hidden rounded-[35px]'>
                                                         <div>
-                                                          <Link to="/ProductV1">  <img className='w-72 h-72 p-3 object-cover group-hover:scale-110 duration-200' src={Data.image} alt="" /></Link>
+                                                            <img className='w-72 h-72 object-cover group-hover:scale-110 duration-200' src={Data.image} alt="" />
 
                                                             <h1 className='absolute px-2 py- rounded-[4px] bg-[#417EF0] font-semibold text-sm text-white top-6 right-7 ' style={{ boxShadow: "0 8px 16px 0 rgba(53,119,240,.3) " }}>{Data.offer}</h1>
 
-                                                            <div className=' absolute left-4 -bottom-3 group-hover:bottom-10 duration-700 opacity-0 group-hover:opacity-100'>
+                                                            <div className=' absolute left-6 -bottom-3 group-hover:bottom-10 duration-700 opacity-0 group-hover:opacity-100'>
                                                                 <div className='flex justify-center'>
                                                                     <div className='flex items-center'>
                                                                         <div className='hover:scale-110 duration-300 inline-block'>
@@ -80,7 +77,7 @@ const DoubleSlide = () => {
                                                                                 Add to Cart</Link>
                                                                         </div>
                                                                         <div className='hover:scale-110 duration-300 inline-block '>
-                                                                          <Link to="/Wishlist">  <a href="#" className=''><i class="fa-regular fa-eye bg-white p-3 rounded-[4px]"></i></a></Link>
+                                                                            <a href="#" className=''><i class="fa-regular fa-eye bg-white p-3 rounded-[4px]"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -110,27 +107,8 @@ const DoubleSlide = () => {
                                     })
                                 }
                             </Slider>
+                        </div>
 
-                        </div>
-                    </div>
-                    <div>
-                        <div className='text-center my-20'>
-                            <a href="#" className=" px-20 py-5 z-10 bg-[#F6F7FB] text-gray-500 font-bold rounded-[4px] relative 
-                                before:absolute
-                                before:contetn-['']
-                                before:px-10
-                                before:py-5
-                                 before:bg-[#F6F7FB] 
-                                before:left-0
-                                before:top-0
-                                before:right-0
-                                before:bottom-0
-                                before:rounded-[4px]
-                                before:-z-10
-                                before:hover:scale-110
-                                before:duration-300">
-                                Load More</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -138,4 +116,4 @@ const DoubleSlide = () => {
     )
 }
 
-export default DoubleSlide
+export default ShopJsonSlide

@@ -8,6 +8,7 @@ import Components from "../components/components";
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useReducer } from 'react'
+import ShopJsonSlide from './shopjsonslide'
 
 
 const ProductV3 = () => {
@@ -405,7 +406,9 @@ const ProductV3 = () => {
         </div>
       </section>
 
-
+      <section className='JSONDATA'>
+    <ShopJsonSlide/>
+   </section>
 
 
       <Components />

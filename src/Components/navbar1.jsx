@@ -16,11 +16,11 @@ export function Dropdown1() {
 
             <div className='flex justify-between items-center bg-white px-4 h-16'>
                 <div className="w-28  ">
-                    <img src={Logos} alt="" />
+                  <Link to="/" ><img src={Logos} alt="" /></Link>
                 </div>
 
 
-                <div className='grid grid-cols-6 gap-x-9 text-sm font-semibold'>
+                <div className='grid grid-cols-6 gap-x-9 text-sm font-semibold '>
                     <div className='home-dropdown'>
                         <button className='font-semibold underline decoration-[2px] underline-offset-4 h-24 '><span className='text-gray-800 hover:text-black'>Home</span><i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
                         <div className='home-content'>

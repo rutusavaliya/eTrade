@@ -20,11 +20,11 @@ export function English() {
   }
   return (
     <div className="dropdown mr-6  z-50">
-      <button onClick={myFunction} className="dropbtn text-sm text-gray-300  mb-2 cursor-pointer">English <i className="fa-solid fa-angle-down text-gray-300 transition-all text-xs"></i></button>
+      <button onClick={myFunction} className="dropbtn text-sm text-gray-500  mb-2 cursor-pointer">English <i className="fa-solid fa-angle-down text-gray-500 transition-all text-xs"></i></button>
       <div id="myDropdown1" className="dropdown-content bg-white shadow-lg">
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">English</a>
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">Arabic</a>
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">Spanish</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">English</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">Arabic</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">Spanish</a>
       </div>
     </div>
   )
@@ -48,11 +48,11 @@ export function USD() {
   }
   return (
     <div className="dropdown z-50">
-      <button onClick={myFunction} className="dropbtn text-sm text-gray-300 mb-2 cursor-pointer">USD <i class="fa-solid fa-angle-down text-gray-300 text-xs"></i></button>
+      <button onClick={myFunction} className="dropbtn text-sm text-gray-500 mb-2 cursor-pointer">USD <i class="fa-solid fa-angle-down text-gray-500 text-xs"></i></button>
       <div id="myDropdown2" className="dropdown-content bg-white shadow-lg">
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">USD</a>
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">AUD</a>
-        <a className='rounded-md text-gray-700 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">EUR</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#home">USD</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#about">AUD</a>
+        <a className='rounded-md text-gray-500 text-sm w-20 pl-2 py-1 ml-2 hover:bg-[#FF5283] hover:text-white' href="#contact">EUR</a>
       </div>
     </div>
   )
@@ -61,10 +61,10 @@ export function USD() {
 export const HomeRightpart = () => {
   return (
     <div className='right-part z-[60]'>
-      <div className='list-none flex text-sm text-gray-700 '>
-        <li className='hover:text-blue-500 cursor-pointer ml-6 text-gray-300'>Help</li>
-        <Link to="/SignUp" className='hover:text-blue-500 cursor-pointer ml-6 text-gray-300'>Join Us</Link>
-        <Link to="/SignIn" className='hover:text-blue-500 cursor-pointer ml-6 text-gray-300'>Sign In</Link>
+      <div className='list-none flex text-sm text-gray-500 '>
+        <li className='hover:text-blue-500 cursor-pointer ml-6 text-gray-500'>Help</li>
+        <Link to="/SignUp" className='hover:text-blue-500 cursor-pointer ml-6 text-gray-500'>Join Us</Link>
+        <Link to="/SignIn" className='hover:text-blue-500 cursor-pointer ml-6 text-gray-500'>Sign In</Link>
       </div>
     </div>
   )
@@ -85,6 +85,25 @@ export const TopBar = () => {
           </div>
         </div>
       </div>
+    </>
+  )
+}
+
+export const TopBar1 = () => {
+  return (
+    <>
+     
+
+        <div className='container mx-auto'>
+          <div className='flex justify-between items-center'>
+            <div className='flex'>
+              <English />
+              <USD />
+            </div>
+            <HomeRightpart />
+          </div>
+        </div>
+     
     </>
   )
 }

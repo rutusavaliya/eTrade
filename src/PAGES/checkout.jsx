@@ -1,73 +1,62 @@
 import React from 'react'
+import { useState } from 'react'
 import Footer from '../Components/Footer'
 import { TopBar } from '../home'
 import { Dropdown1, NavBottom } from "../components/navbar1"
 
-function Checkout() {
-  return (
-    <>
-     <div>
-        <TopBar />
-      </div>
-      <div>
-        <div>
-          <Dropdown1 />
-        </div>
-      </div>
-      <div>
-        <NavBottom />
-      </div>
-      <section className='BILLING-FORM container mx-auto my-[80px]'>
+const Checkout = () => {
+    const [isOpen1, setIsOpen1] = useState(false);
+    const toggleAccordion1 = () => {
+        setIsOpen1(!isOpen1);
+    };
+    const [isOpen2, setIsOpen2] = useState(false);
+    const toggleAccordion2 = () => {
+        setIsOpen2(!isOpen2);
+    };
+    const [isOpen3, setIsOpen3] = useState(false);
+    const toggleAccordion3 = () => {
+        setIsOpen3(!isOpen3);
+    };
+
+    const [selectCateg, setselectCateg] = useState("Free Shippping");
+    const [selecttransfer, setselectTransfer] = useState("Direct bank transfer");
+    return (
+        <>
+            <div>
+                <TopBar />
+            </div>
+            <div>
+                <div>
+                    <Dropdown1 />
+                </div>
+            </div>
+            <div>
+                <NavBottom />
+            </div>
+            <section className='BILLING-FORM container mx-auto my-[80px]'>
                     <div className='grid grid-cols-2 gap-10'>
                         <div className='LEFT-PART'>
                             <div className='dropdown-1'>
                                 <div className='flex  items-center py-4 px-7 bg-[#F6F7FB] rounded-md mb-5'>
                                     <span className='text-[#777777] text-lg'><i class="ri-user-3-fill "></i></span>
                                     <h1 className='text-gray-500 ml-2'>Returning customer?</h1>
-                                    <a className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1 ' href="">Click here to login <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></a>
+                                    <div onClick={toggleAccordion1} className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1 ' href="">Click here to login <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></div>
                                 </div>
 
-                                <div className='border rounded-xl p-7 mb-5 hidden'>
-                                    <h1 className='text-gray-500 mb-8'>If you didn't Logged in, Please Log in first.</h1>
-                                    <div className='relative text-gray-500 mb-8'>
-                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Email</label>
-                                        <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
-                                    </div>
-                                    <div className='relative text-gray-500 mb-8'>
-                                        <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Password</label>
-                                        <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
-                                    </div>
-                                    <div className='BUTTON'>
-                                        <a href="#" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
-                                            before:absolute
-                                            before:content-[""]
-                                            before:bg-[#3577F0]
-                                            before:top-0
-                                            before:bottom-0
-                                            before:left-0
-                                            before:right-0
-                                            before:hover:scale-110
-                                            before:duration-300
-                                            before:rounded-md
-                                            before:-z-10
-                                            '>Sign In</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='dropdown-2'>
-                                <div className='flex  items-center py-4 px-7 bg-[#F6F7FB] rounded-md mb-8'>
-                                    <span className='text-[#777777] text-lg'><i class="ri-pencil-fill "></i></span>
-                                    <h1 className='text-gray-500 ml-2'>Have a coupon?</h1>
-                                    <a className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1' href="">Click here to enter your code <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></a>
-                                </div>
-
-                                <div className='border rounded-xl p-7 mb-5 hidden'>
-                                    <h1 className='text-gray-500 mb-8'>If you have a coupon code, please apply it below.</h1>
-                                    <div className='flex items-center text-gray-500 mb-4'>
-                                        <input type="text" className=' border border-gray-300  px-7 py-4 rounded-md font-normal outline-none mr-4' placeholder='Enter coupon code' />
+                                {
+                                    isOpen1 && <div className='border rounded-xl p-7 mb-5'>
+                                        <h1 className='text-gray-500 mb-8'>If you didn't Logged in, Please Log in first.</h1>
+                                        <div className='relative text-gray-500 mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Email</label>
+                                            <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
+                                        </div>
+                                        <div className='relative text-gray-500 mb-8'>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Password</label>
+                                            <input type="text" className='w-full  border border-gray-300  px-7 py-4 rounded-md font-normal outline-none ' />
+                                        </div>
                                         <div className='BUTTON'>
-                                            <a href="#" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
-                                            before:absolute code
+                                            <a href="" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
+                                            before:absolute
                                             before:content-[""]
                                             before:bg-[#3577F0]
                                             before:top-0
@@ -81,7 +70,39 @@ function Checkout() {
                                             '>Sign In</a>
                                         </div>
                                     </div>
+                                }
+                            </div>
+
+                            <div className='dropdown-2'>
+                                <div className='flex  items-center py-4 px-7 bg-[#F6F7FB] rounded-md mb-8'>
+                                    <span className='text-[#777777] text-lg'><i class="ri-pencil-fill "></i></span>
+                                    <h1 className='text-gray-500 ml-2'>Have a coupon?</h1>
+                                    <div onClick={toggleAccordion2} className='font-medium text-gray-700 hover:text-[#3577F0] duration-300 ml-1' href="">Click here to enter your code <span className='text-[#777777] text-xl'><i class="ri-arrow-down-s-line "></i></span></div>
                                 </div>
+
+                                {
+                                    isOpen2 && <div className='border rounded-xl p-7 mb-5 '>
+                                        <h1 className='text-gray-500 mb-8'>If you have a coupon code, please apply it below.</h1>
+                                        <div className='flex items-center text-gray-500 mb-4'>
+                                            <input type="text" className=' border border-gray-300  px-7 py-4 rounded-md font-normal outline-none mr-4' placeholder='Enter coupon code' />
+                                            <div className='BUTTON'>
+                                                <a href="" className='relative px-10 py-4 bg-[#3577F0] text-white font-bold rounded-md 
+                                            before:absolute code
+                                            before:content-[""]
+                                            before:bg-[#3577F0]
+                                            before:top-0
+                                            before:bottom-0
+                                            before:left-0
+                                            before:right-0
+                                            before:hover:scale-110
+                                            before:duration-300
+                                            before:rounded-md
+                                            before:-z-10
+                                            '>Sign In</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
                             </div>
 
                             <div className='BILLING-DETAILS'>
@@ -152,13 +173,13 @@ function Checkout() {
                                     <span className='ml-3 text-base cursor-pointer'>Create an account</span>
                                 </div>
 
-                                <div>
-                                    <div className='flex justify-between items-center mb-8'>
+                                <div className='dropdown-3'>
+                                    <div onClick={toggleAccordion3} className='flex justify-between items-center mb-8'>
                                         <h1 className='font-medium text-2xl text-[#292930] cursor-pointer'>Ship to a different address?</h1>
                                         <input className='w-4 h-4 cursor-pointer' type="checkbox" />
                                     </div>
 
-                                    <div className='hidden'>
+                                    {isOpen3 && <div>
                                         <div className='relative text-gray-500  mb-8'>
                                             <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
                                             <div className='border border-gray-300  rounded-md font-normal '>
@@ -192,15 +213,15 @@ function Checkout() {
                                             <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Phone <span className='text-[#E76458] ml-1'>*</span></label>
                                             <input type="text" className='w-full  border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
                                         </div>
-                                    </div>
+                                    </div>}
 
                                     <div className='relative text-gray-500 '>
                                         <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>Other Notes (optional)</label>
                                         <textarea className='resize-none border w-full border-gray-300 rounded-md font-normal outline-none
                                     px-9 py-5' cols="" rows="5" placeholder='Notes about your order, e.g. speacial notes for delivery.'></textarea>
                                     </div>
-
                                 </div>
+
                             </div>
                         </div>
 
@@ -232,14 +253,18 @@ function Checkout() {
                                                 <h1>$35.00</h1>
                                             </div>
                                             <div className='text-gray-500'>
+                                            {/* <div>
+                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Sun Care"} onChange={() => setselectCateg("Sun Care")} />
+                                                <label className='ml-3' for="checkbox">Sun Care</label>
+                                            </div> */}
                                                 <ul className='leading-7'>
-                                                    <li><input className='cursor-pointer' type="radio" checked />
+                                                    <li><input className='cursor-pointer' type="radio" checked={selectCateg === 'Free Shippping'} onChange={() => setselectCateg("Free Shippping")}/>
                                                         <label className='ml-2 cursor-pointer'>Free Shippping</label>
                                                     </li>
-                                                    <li><input className='cursor-pointer' type="radio" />
+                                                    <li><input className='cursor-pointer' type="radio" checked={selectCateg === 'Local'} onChange={() => setselectCateg("Local")}/>
                                                         <label className='ml-2 cursor-pointer'>Local</label>
                                                     </li>
-                                                    <li><input className='cursor-pointer' type="radio" />
+                                                    <li><input className='cursor-pointer' type="radio" checked={selectCateg === 'Flat rate'} onChange={() => setselectCateg("Flat rate")}/>
                                                         <label className='ml-2 cursor-pointer'>Flat rate</label>
                                                     </li>
                                                 </ul>
@@ -254,19 +279,19 @@ function Checkout() {
 
                                 <div className='mt-8'>
                                     <div className='border-b-2 py-4'>
-                                        <input className='h-4 w-4' type="radio" checked />
+                                        <input className='h-4 w-4' type="radio" checked={selecttransfer === 'Direct bank transfer'} onChange={() => setselectTransfer("Direct bank transfer")} />
                                         <label className='ml-3 text-xl font-semibold'>Direct bank transfer</label>
                                         <p className='text-gray-500 ml-7 leading-8 tracking-wide mt-5'>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
                                     </div>
                                     <div className='border-b-2 py-4'>
-                                        <input className='h-4 w-4' type="radio" />
+                                        <input className='h-4 w-4' type="radio" checked={selecttransfer === 'Cash on delivery'} onChange={() => setselectTransfer("Cash on delivery")}/>
                                         <label className='ml-3 text-xl font-semibold'>Cash on delivery</label>
                                         <p className='text-gray-500 ml-7 leading-8 tracking-wide mt-5'>Pay with cash upon delivery.</p>
                                     </div>
                                     <div className='border-b-2 py-4 '>
                                         <div className='flex justify-between items-center'>
                                             <div>
-                                                <input className='h-4 w-4' type="radio" />
+                                                <input className='h-4 w-4' type="radio" checked={selecttransfer === 'Paypal'} onChange={() => setselectTransfer("Paypal")}/>
                                                 <label className='ml-3 text-xl font-semibold'>Paypal</label>
                                             </div>
                                             <img src="../src/assets/pages/checkout/asset 2.png" alt="" />
@@ -293,11 +318,11 @@ function Checkout() {
                         </div>
                     </div>
                 </section>
-      <div className=' container mx-auto'>
-        <Footer />
-      </div>
-    </>
-  )
+            <div className=' container mx-auto'>
+                <Footer />
+            </div>
+        </>
+    )
 }
 
 export default Checkout
